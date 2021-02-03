@@ -121,9 +121,17 @@ class Game{
                }
            }
        }
+        if(player.score>=10){
+           this.end();
+       }
     }
 
     end(){
        console.log("Game Ended");
+       game.update(2);
+       clear();
+       fill("blue");
+       textSize(40);
+       text("GAME OVER",350,300);
     }
 }
